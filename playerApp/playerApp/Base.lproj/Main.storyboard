@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="playerApp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Beautiful Things" translatesAutoresizingMaskIntoConstraints="NO" id="rLn-Zb-uUP">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="Z8o-fJ-CnN">
+                                <rect key="frame" x="0.0" y="118" width="393" height="666"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LxZ-me-7hB">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="338"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Beautiful Things" translatesAutoresizingMaskIntoConstraints="NO" id="rtS-R0-2BZ">
+                                                <rect key="frame" x="16" y="8" width="361" height="330"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="330" id="ACo-fq-rwY"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="rtS-R0-2BZ" secondAttribute="trailing" constant="16" id="XPH-Dd-wKp"/>
+                                            <constraint firstItem="rtS-R0-2BZ" firstAttribute="top" secondItem="LxZ-me-7hB" secondAttribute="topMargin" id="eD4-zV-ysB"/>
+                                            <constraint firstItem="rtS-R0-2BZ" firstAttribute="leading" secondItem="LxZ-me-7hB" secondAttribute="leading" constant="16" id="uV6-qt-FiH"/>
+                                            <constraint firstAttribute="height" priority="750" constant="350" id="vbw-ee-HVV"/>
+                                        </constraints>
+                                    </view>
+                                    <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y5Y-sC-xnM">
+                                        <rect key="frame" x="0.0" y="426" width="393" height="150"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ymv-C0-9ps">
+                                                <rect key="frame" x="36" y="0.0" width="321" height="150"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beautiful Things" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ees-h6-VVB">
+                                                        <rect key="frame" x="0.0" y="0.0" width="321" height="60"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="18"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TXN-E7-2CA">
+                                                        <rect key="frame" x="0.0" y="90" width="321" height="60"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </progressView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="HrV-G0-QYW"/>
+                                            <constraint firstAttribute="trailing" secondItem="ymv-C0-9ps" secondAttribute="trailing" constant="36" id="L3Y-Hq-FwO"/>
+                                            <constraint firstAttribute="bottom" secondItem="ymv-C0-9ps" secondAttribute="bottom" id="Lqr-3u-4Ge"/>
+                                            <constraint firstItem="ymv-C0-9ps" firstAttribute="top" secondItem="y5Y-sC-xnM" secondAttribute="top" id="dLZ-ng-zJW"/>
+                                            <constraint firstItem="ymv-C0-9ps" firstAttribute="leading" secondItem="y5Y-sC-xnM" secondAttribute="leading" constant="36" id="w7C-Gp-C5A"/>
+                                        </constraints>
+                                    </view>
+                                    <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I6s-u2-JNZ">
+                                        <rect key="frame" x="0.0" y="576" width="393" height="90"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="center" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="g8A-yn-hhr">
+                                                <rect key="frame" x="12" y="2" width="369" height="68"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2O-Y7-wco">
+                                                        <rect key="frame" x="0.0" y="0.0" width="116.33333333333333" height="68"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="back"/>
+                                                        <connections>
+                                                            <action selector="prevSongButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9nj-NN-rUS"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4yj-17-rr1">
+                                                        <rect key="frame" x="126.33333333333334" y="0.0" width="116.33333333333334" height="68"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="play"/>
+                                                        <connections>
+                                                            <action selector="playButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VRz-zp-L53"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uia-6B-XUa">
+                                                        <rect key="frame" x="252.66666666666671" y="0.0" width="116.33333333333334" height="68"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="next"/>
+                                                        <connections>
+                                                            <action selector="nextSongButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ueP-c3-HTt"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="90" id="5az-SB-VhY"/>
+                                            <constraint firstAttribute="bottom" secondItem="g8A-yn-hhr" secondAttribute="bottom" constant="20" id="BTA-ck-UtP"/>
+                                            <constraint firstItem="g8A-yn-hhr" firstAttribute="leading" secondItem="I6s-u2-JNZ" secondAttribute="leading" constant="12" id="SaV-Ku-SHD"/>
+                                            <constraint firstItem="g8A-yn-hhr" firstAttribute="top" secondItem="I6s-u2-JNZ" secondAttribute="top" constant="2" id="jyz-JU-rJz"/>
+                                            <constraint firstAttribute="trailing" secondItem="g8A-yn-hhr" secondAttribute="trailing" constant="12" id="kdq-PP-TiQ"/>
+                                            <constraint firstAttribute="width" constant="393" id="qAm-6p-rCk"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="y5Y-sC-xnM" firstAttribute="top" secondItem="LxZ-me-7hB" secondAttribute="bottom" constant="88" id="3IV-2Q-JGe"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="Z8o-fJ-CnN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AlE-ZD-GAz"/>
+                            <constraint firstAttribute="bottom" secondItem="rLn-Zb-uUP" secondAttribute="bottom" id="Mfe-68-Z2x"/>
+                            <constraint firstItem="rLn-Zb-uUP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="cD2-6a-l58"/>
+                            <constraint firstItem="Z8o-fJ-CnN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gWH-hA-ags"/>
+                            <constraint firstItem="rLn-Zb-uUP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="juP-Ve-u6q"/>
+                            <constraint firstAttribute="bottom" secondItem="Z8o-fJ-CnN" secondAttribute="bottom" constant="68" id="s7t-7x-rFT"/>
+                            <constraint firstAttribute="trailing" secondItem="rLn-Zb-uUP" secondAttribute="trailing" id="v4P-bV-6xE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z8o-fJ-CnN" secondAttribute="trailing" id="zKn-cF-bVi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="durationShowing" destination="TXN-E7-2CA" id="OoQ-PP-z8y"/>
+                        <outlet property="nextButtonLabel" destination="Uia-6B-XUa" id="gVi-P2-BNu"/>
+                        <outlet property="playStopLabel" destination="4yj-17-rr1" id="sr1-CJ-3Nw"/>
+                        <outlet property="prevButtonLabel" destination="X2O-Y7-wco" id="39Z-Nh-tl3"/>
+                        <outlet property="songImage" destination="rtS-R0-2BZ" id="gMq-pW-3x7"/>
+                        <outlet property="songLabel" destination="ees-h6-VVB" id="kGL-1f-Xdx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="101.5267175572519" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Beautiful Things" width="1200" height="1200"/>
+        <image name="back" width="64" height="64"/>
+        <image name="next" width="64" height="64"/>
+        <image name="play" width="64" height="64"/>
+    </resources>
+</document>
