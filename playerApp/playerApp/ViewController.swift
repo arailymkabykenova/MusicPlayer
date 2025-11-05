@@ -9,6 +9,7 @@ import UIKit
 import AVFAudio
 class ViewController: UIViewController {
     
+    @IBOutlet weak var backImage: UIImageView!
     var songPlayer:AVAudioPlayer!
     var songName:String?
     @IBOutlet weak var songLabel: UILabel!
@@ -22,6 +23,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var nextButtonLabel: UIButton!
     @IBOutlet weak var playStopLabel: UIButton!
     @IBAction func prevSongButton(_ sender: UIButton) {
+        let prevSongName=prevSong(songLabel.text!,songArray)
+        songLabel.text=prevSongName
+        songImage.image=UIImage(named:prevSongName)
+        backImage.image=UIImage(named:prevSongName)
+        checkPlay()
     }
     
     
@@ -30,7 +36,6 @@ class ViewController: UIViewController {
         print(isPlay)
         if !isPlay{
             if songPlayer == nil{
-                print(isPlay)
                 playMusic()
             }
             else{
@@ -46,10 +51,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func nextSongButton(_ sender: UIButton) {
-        let nextSong=nextSong(songName!,songArray)
+        let nextSong=nextSong(songLabel.text!,songArray)
             songLabel.text=nextSong
             songImage.image=UIImage(named:nextSong)
-            playMusic()
+            backImage.image=UIImage(named:nextSong)
+        backImage.alpha=0.4
+        checkPlay()
         
     }
     
@@ -57,6 +64,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         songName=songLabel.text
+        durationShowing.isHidden=true
+        
 }
     
     //play
@@ -73,7 +82,16 @@ class ViewController: UIViewController {
         }
     }
     
-   
+    func checkPlay(){
+        if isPlay{
+                playMusic()
+            }
+            else{
+                playMusic()
+            songPlayer.pause()
+            
+        }
+    }
     
     
 

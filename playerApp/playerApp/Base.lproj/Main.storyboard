@@ -129,6 +129,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backImage" destination="rLn-Zb-uUP" id="umq-CZ-yGL"/>
                         <outlet property="durationShowing" destination="TXN-E7-2CA" id="OoQ-PP-z8y"/>
                         <outlet property="nextButtonLabel" destination="Uia-6B-XUa" id="gVi-P2-BNu"/>
                         <outlet property="playStopLabel" destination="4yj-17-rr1" id="sr1-CJ-3Nw"/>
