@@ -14,34 +14,37 @@ var songArray=[
     Song(name:"The Door", artist: "Teddy Swims", durationTime: 211, songImage: "The Door")
 ]
 
-func nextSong(_ songName:String, _ songArray:[Song])->String{
-    for i in 0..<songArray.count{
-        if songName==songArray[i].name{
-            if i<songArray.count-1{
-                return songArray[i+1].name
-            }else{
-                return songArray[0].name
-            }
-           
-            }
-        
-        }
-    return ""
-    }
-func prevSong(_ songName:String, _ songArray:[Song])->String{
-    for i in (0..<songArray.count).reversed(){
-        let length=songArray.count
-        if songName==songArray[i].name{
-            if i>0{
-                //print(songArray[i-1].name)
-                return songArray[i-1].name
-            }else{
-                //print(songArray[length-1].name)
-                return songArray[length-1].name
-            }
-        }
-    }
-    return ""
-}
 
+    //func nextSong(_ songName:String, _ songArray:[Song])->String{
+    //    for i in 0..<songArray.count{
+    //        if songName==songArray[i].name{
+    //            if i<songArray.count-1{
+    //                return songArray[i+1].name
+    //            }else{
+    //                return songArray[0].name
+    //            }
+    //
+    //            }
+    //
+    //        }
+    //    return ""
+    //    }
+//    func prevSong(_ songName:String, _ songArray:[Song])->String{
+//        for i in (0..<songArray.count).reversed(){
+//            let length=songArray.count
+//            if songName==songArray[i].name{
+//                if i>0{
+//                    //print(songArray[i-1].name)
+//                    return songArray[i-1].name
+//                }else{
+//                    //print(songArray[length-1].name)
+//                    return songArray[length-1].name
+//                }
+//            }
+//        }
+//        return ""
+//    }
+    
+
+    
 

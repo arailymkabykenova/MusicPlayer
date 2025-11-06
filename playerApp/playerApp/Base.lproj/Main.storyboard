@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,20 +12,20 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="playerApp" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Beautiful Things" translatesAutoresizingMaskIntoConstraints="NO" id="rLn-Zb-uUP">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="Z8o-fJ-CnN">
-                                <rect key="frame" x="0.0" y="118" width="393" height="666"/>
+                                <rect key="frame" x="0.0" y="124" width="440" height="764"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LxZ-me-7hB">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="338"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="440" height="350"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Beautiful Things" translatesAutoresizingMaskIntoConstraints="NO" id="rtS-R0-2BZ">
-                                                <rect key="frame" x="16" y="8" width="361" height="330"/>
+                                                <rect key="frame" x="16" y="8" width="408" height="330"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="330" id="ACo-fq-rwY"/>
                                                 </constraints>
@@ -39,19 +39,19 @@
                                         </constraints>
                                     </view>
                                     <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y5Y-sC-xnM">
-                                        <rect key="frame" x="0.0" y="426" width="393" height="150"/>
+                                        <rect key="frame" x="0.0" y="438" width="440" height="150"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ymv-C0-9ps">
-                                                <rect key="frame" x="36" y="0.0" width="321" height="150"/>
+                                                <rect key="frame" x="36" y="0.0" width="368" height="150"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beautiful Things" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ees-h6-VVB">
-                                                        <rect key="frame" x="0.0" y="0.0" width="321" height="60"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="368" height="60"/>
                                                         <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="18"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TXN-E7-2CA">
-                                                        <rect key="frame" x="0.0" y="90" width="321" height="60"/>
+                                                        <rect key="frame" x="0.0" y="90" width="368" height="60"/>
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </progressView>
                                                 </subviews>
@@ -68,33 +68,33 @@
                                         </constraints>
                                     </view>
                                     <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I6s-u2-JNZ">
-                                        <rect key="frame" x="0.0" y="576" width="393" height="90"/>
+                                        <rect key="frame" x="0.0" y="674" width="440" height="90"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="center" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="g8A-yn-hhr">
-                                                <rect key="frame" x="12" y="2" width="369" height="68"/>
+                                                <rect key="frame" x="12" y="2" width="416" height="68"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2O-Y7-wco">
-                                                        <rect key="frame" x="0.0" y="0.0" width="116.33333333333333" height="68"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="132" height="68"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="back"/>
                                                         <connections>
-                                                            <action selector="prevSongButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9nj-NN-rUS"/>
+                                                            <action selector="playerButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6KW-4b-yGv"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4yj-17-rr1">
-                                                        <rect key="frame" x="126.33333333333334" y="0.0" width="116.33333333333334" height="68"/>
+                                                        <rect key="frame" x="142" y="0.0" width="132" height="68"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="play"/>
                                                         <connections>
-                                                            <action selector="playButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VRz-zp-L53"/>
+                                                            <action selector="playerButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WZ4-uB-QYM"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uia-6B-XUa">
-                                                        <rect key="frame" x="252.66666666666671" y="0.0" width="116.33333333333334" height="68"/>
+                                                        <rect key="frame" x="284" y="0.0" width="132" height="68"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="next"/>
                                                         <connections>
-                                                            <action selector="nextSongButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ueP-c3-HTt"/>
+                                                            <action selector="playerButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fxg-xd-buL"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -107,7 +107,7 @@
                                             <constraint firstItem="g8A-yn-hhr" firstAttribute="leading" secondItem="I6s-u2-JNZ" secondAttribute="leading" constant="12" id="SaV-Ku-SHD"/>
                                             <constraint firstItem="g8A-yn-hhr" firstAttribute="top" secondItem="I6s-u2-JNZ" secondAttribute="top" constant="2" id="jyz-JU-rJz"/>
                                             <constraint firstAttribute="trailing" secondItem="g8A-yn-hhr" secondAttribute="trailing" constant="12" id="kdq-PP-TiQ"/>
-                                            <constraint firstAttribute="width" constant="393" id="qAm-6p-rCk"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="393" id="qAm-6p-rCk"/>
                                         </constraints>
                                     </view>
                                 </subviews>

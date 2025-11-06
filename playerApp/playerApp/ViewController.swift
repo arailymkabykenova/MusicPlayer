@@ -8,6 +8,40 @@
 import UIKit
 import AVFAudio
 class ViewController: UIViewController {
+    var currentIndex:Int=0
+    func nextSong(_ songArray:[Song])->Int{
+            if currentIndex<songArray.count-1{
+                currentIndex+=1
+                return currentIndex
+            }else{
+                currentIndex=0
+                return 0
+            }
+        }
+    func prevSong(_ songArray:[Song])->Int{
+        let length=songArray.count
+        if currentIndex>0{
+            currentIndex-=1
+            return currentIndex
+            
+        }else{
+            currentIndex=length-1
+            return currentIndex
+        }
+    }
+    @IBAction func playerButtons(_ sender: UIButton) {
+        switch sender.tag{
+        case 0:
+            playStopMusic()
+        case 1:
+            turnPrevSong()
+        case 2:
+            turnNextSong()
+        default:
+            return
+        }
+            
+    }
     
     @IBOutlet weak var backImage: UIImageView!
     var songPlayer:AVAudioPlayer!
@@ -22,21 +56,21 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var nextButtonLabel: UIButton!
     @IBOutlet weak var playStopLabel: UIButton!
-    @IBAction func prevSongButton(_ sender: UIButton) {
-        let prevSongName=prevSong(songLabel.text!,songArray)
-        songLabel.text=prevSongName
-        songImage.image=UIImage(named:prevSongName)
-        backImage.image=UIImage(named:prevSongName)
-        checkPlay()
-    }
-    
     
     var isPlay:Bool=false
-    @IBAction func playButton(_ sender: UIButton) {
-        print(isPlay)
+   
+  
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        durationShowing.isHidden=true
+        
+}
+    func playStopMusic(){
         if !isPlay{
             if songPlayer == nil{
-                playMusic()
+                playMusic(songArray,currentIndex)
             }
             else{
                 songPlayer.play()
@@ -49,28 +83,26 @@ class ViewController: UIViewController {
             playStopLabel.setImage(UIImage(named:"play"), for: .normal)
         }
     }
-    
-    @IBAction func nextSongButton(_ sender: UIButton) {
-        let nextSong=nextSong(songLabel.text!,songArray)
-            songLabel.text=nextSong
-            songImage.image=UIImage(named:nextSong)
-            backImage.image=UIImage(named:nextSong)
-        backImage.alpha=0.4
+    func turnPrevSong(){
+        let prevSongName=prevSong(songArray)
+        updateUI(prevSongName)
         checkPlay()
-        
     }
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        songName=songLabel.text
-        durationShowing.isHidden=true
-        
-}
-    
-    //play
-    func playMusic(){
-        guard let url=Bundle.main.url(forResource: songLabel.text, withExtension: "m4a") else{
+    func turnNextSong(){
+        let nextSong=nextSong(songArray)
+        updateUI(nextSong)
+        checkPlay()
+    }
+    func checkPlay(){
+        playMusic(songArray,currentIndex)
+        if !isPlay{
+            songPlayer.pause()
+            }
+    }
+
+    func playMusic(_ songArray:[Song],_ currentSong:Int){
+        guard let url=Bundle.main.url(forResource: songArray[currentSong].name, withExtension: "m4a") else{
             return print("file wasn't found")
         }
         do{
@@ -82,18 +114,16 @@ class ViewController: UIViewController {
         }
     }
     
-    func checkPlay(){
-        if isPlay{
-                playMusic()
-            }
-            else{
-                playMusic()
-            songPlayer.pause()
-            
-        }
+  
+    func updateUI(_ currentSong:Int){
+        songLabel.text="\(songArray[currentSong].name) - \(songArray[currentSong].artist)"
+        songImage.image=UIImage(named:songArray[currentSong].songImage)
+        backImage.image=UIImage(named:songArray[currentSong].songImage)
+        backImage.alpha=0.4
+        
     }
     
-    
-
 }
+
+
 
