@@ -9,26 +9,7 @@ import UIKit
 import AVFAudio
 class ViewController: UIViewController {
     var currentIndex:Int=0
-    func nextSong(_ songArray:[Song])->Int{
-            if currentIndex<songArray.count-1{
-                currentIndex+=1
-                return currentIndex
-            }else{
-                currentIndex=0
-                return 0
-            }
-        }
-    func prevSong(_ songArray:[Song])->Int{
-        let length=songArray.count
-        if currentIndex>0{
-            currentIndex-=1
-            return currentIndex
-            
-        }else{
-            currentIndex=length-1
-            return currentIndex
-        }
-    }
+    
     @IBAction func playerButtons(_ sender: UIButton) {
         switch sender.tag{
         case 0:
@@ -58,15 +39,35 @@ class ViewController: UIViewController {
     @IBOutlet weak var playStopLabel: UIButton!
     
     var isPlay:Bool=false
-   
-  
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         durationShowing.isHidden=true
         
 }
+    //pointer for next music
+    func nextSong(_ songArray:[Song])->Int{
+            if currentIndex<songArray.count-1{
+                currentIndex+=1
+                return currentIndex
+            }else{
+                currentIndex=0
+                return 0
+            }
+        }
+    //pointer fro previous song
+    func prevSong(_ songArray:[Song])->Int{
+        let length=songArray.count
+        if currentIndex>0{
+            currentIndex-=1
+            return currentIndex
+            
+        }else{
+            currentIndex=length-1
+            return currentIndex
+        }
+    }
+    
     func playStopMusic(){
         if !isPlay{
             if songPlayer == nil{
@@ -83,24 +84,26 @@ class ViewController: UIViewController {
             playStopLabel.setImage(UIImage(named:"play"), for: .normal)
         }
     }
+    //turn to  previous song
     func turnPrevSong(){
         let prevSongName=prevSong(songArray)
         updateUI(prevSongName)
         checkPlay()
     }
-    
+    //turn to next song
     func turnNextSong(){
         let nextSong=nextSong(songArray)
         updateUI(nextSong)
         checkPlay()
     }
+    //checking music is play or not
     func checkPlay(){
         playMusic(songArray,currentIndex)
         if !isPlay{
             songPlayer.pause()
             }
     }
-
+    
     func playMusic(_ songArray:[Song],_ currentSong:Int){
         guard let url=Bundle.main.url(forResource: songArray[currentSong].name, withExtension: "m4a") else{
             return print("file wasn't found")
